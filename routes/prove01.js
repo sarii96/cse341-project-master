@@ -13,6 +13,7 @@ router.post('/',(req, res, next) => {
     res.render('pages/prove01-b', { 
         firstName: req.body.fname,
         lastName: req.body.lname,
+        email: req.body.email,
         
     });
 });
