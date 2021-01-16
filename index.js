@@ -21,6 +21,9 @@ const app = express();
 // Route setup. You can implement more in the future!
 //prove activities
 const prove01Routes = require('./routes/prove01');
+const prove02Routes = require('./routes/prove02');
+
+
 //team activities
 const ta01Routes = require('./routes/ta01');
 const ta02Routes = require('./routes/ta02');
@@ -37,6 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')))
    //.set('view engine', 'hbs')
    .use(bodyParser({extended: false})) // For parsing the body of a POST
    .use('/prove01', prove01Routes)
+   .use('/prove02', prove02Routes)
    .use('/ta01', ta01Routes)
    .use('/ta02', ta02Routes) 
    .use('/ta03', ta03Routes) 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <% include ../includes/header.ejs %>
+</head>
+
+<body>
+    <% include ../includes/nav.ejs %>
+    <div class="jumbotron text-center">
+        <div class="container">
+            <h1><%= title %></h1>
+            <p>This is the placeholder for Prove 02</p>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <form action="/prove02/addbook" method="POST">
+                <label for="newbook">Title Book:</label><br>
+                <input type="text" name="newbook">
+                <label for="summary">Summary:</label><br>
+                <textarea id="summary" name="summary" row="15" cols="50"></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
