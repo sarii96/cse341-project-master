@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 
 <head>
     <% include ../includes/header.ejs %>
 </head>
+<style>
+    .book {
+        margin-left: 5em;
+    }
+</style>
 
 <body>
     <% include ../includes/nav.ejs %>
@@ -14,11 +18,14 @@
             <p>This is the placeholder for Prove 02</p>
         </div>
     </div>
-    <div class="container">
-        <h3>Title</h3>
-        <%= title %>
-        <p>Summary</p>
-        <%=book%>
+    <div class="book">
+
+        <% for(book of books) { %>
+        <p><strong>Title:</strong></p>
+        <h4><%= book.bookname %></h4>
+        <p><strong>Summary:</strong></p>
+        <p><%= book.summary %></p><br><br>
+        <% } %>
     </div>
 </body>
 
