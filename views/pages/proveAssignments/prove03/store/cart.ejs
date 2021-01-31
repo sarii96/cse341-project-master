@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../partials/header.ejs %>
+</head>
+
+<body>
+    <% include ../partials/nav.ejs %>
+
+    <div class="jumbotron text-center">
+        <div class="container">
+            <h1><%= title %></h1>
+        </div>
+    </div>
+    <div>
+        <div>
+            <h3>Cart</h3>
+            <% if (items.length > 0) { %>
+            <p>Price: $<%= totalPrice %>.00</p>
+            <ul>
+                <% for (item of items) { %>
+                <li>
+                    <p><%= item.itemData.title %> (<%= item.qty %>)</p>
+                    <form method="POST" action="/assignments/prove03-store/cart-delete-item">
+                        <input type="hidden" name="delSku" id="delsku" value="<%= item.itemData.sku %> ">
+                        <button type="submit" class="btn btn-default">Delete</button>
+                    </form>
+                </li>
+                <% } %>
+            </ul>
+            <% } else { %>
+            <p>No Products in Cart!</p>
+            <% } %>
+        </div>
+    </div>
+</body>
+
+</html>
