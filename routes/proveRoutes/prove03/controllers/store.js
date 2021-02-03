@@ -64,12 +64,10 @@ res.render('page/proveAssignments/prove03/store/cart', {
 
 exports.postCart = (req, res, next) => {
     const _sku = req.body.sku;
-    console.log("sku :",_sku)
-    Item.findBySku(_sku, item => {
-        console.log("item :",item)
+    Item.findBySku(_sku, (item) => {
         Cart.addItem(_sku, item.price);
     });
-    res.redirect('/proveAssignments/prove03/store/cart');
+    res.redirect('pages/proveAssignments/prove03/store/cart');
 }
 
 exports.postCartDeleteItem = (req, res, next) => {

@@ -1,0 +1,15 @@
+[{
+    "sku":"GB002",
+    "title": "Hunger Games",
+    "imgURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl4spJ1gwzHBlyJ6WTfQwyp-eRblFpqejvYQ&usqp=CAU",
+    "price": 10,
+    "description": "Once Upon a time..."
+},
+
+{   "sku": "GB001",
+    "title": "The Maze Runner",
+    "imgURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhi--b_bqCcupSb44UQn4RzJgFStOp6y9TUg&usqp=CAU",
+    "price": 10,
+    "description": "Once Upon a time..."
+}
+]

@@ -10,7 +10,7 @@ router.get('/add-item', adminController.getAddItem);
 router.get('/items', adminController.getItems);
 
 
-router.post('/add-item', adminController.postAddItem);
+router.post('/add-item', adminController.postAddItems);
 
 router.get('/edit-item/:itemSku', adminController.getEditItem);
 

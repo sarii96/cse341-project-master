@@ -2,6 +2,8 @@ const team = require('./teamRoutes');
 const assignments = require('./proveRoutes');
 const express = require('express');
 const router = express.Router();
+// const mongoose = require('mongoose');
+// const PORT = process.env.PORT || 5000
 router
 .use('/assignments', assignments)
 .use('/team', team)

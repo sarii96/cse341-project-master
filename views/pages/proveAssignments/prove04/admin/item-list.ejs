@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../../../../includes/header.ejs %>
+</head>
+
+<body>
+    <% include ../../../../includes/nav.ejs %>
+    <div class="jumbotron text-center">
+        <div class="container">
+            <h1><%= title %></h1>
+        </div>
+    </div>
+    <div>
+        <div>
+            <p>Items:</p>
+            <% if(items.length > 0) { %>
+            <ul class="card-list">
+                <% for(item of items) { %>
+
+                <li class="card-item">
+                    <p>Title:<%= item.title%></p>
+                    <img src='<%= item.imgURL%>' class="product-image">
+                    <p>Price:<%= item.price%></p>
+                    <div class="card-actions">
+                        <a class="btn btn-default" href="/assignments/prove04-store/items/<%= item.id %>">Details</a>
+                        <a class="btn btn-default"
+                            href="/assignments/prove04-admin/edit-item/<%= item.id %>?edit=true">Edit</a>
+                        <form method="POST" action="/assignments/prove04-admin/delete-item">
+                            <input type="hidden" name="itemsku" value="<%= item.id %> ">
+                            <button type="submit" class="btn btn-default">Delete</button>
+                        </form>
+                    </div>
+                </li>
+                <%} %>
+            </ul>
+            <%} %>
+        </div>
+    </div>
