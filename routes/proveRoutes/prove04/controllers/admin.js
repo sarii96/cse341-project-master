@@ -84,7 +84,7 @@ exports.getItems = (req, res, next) => {
       // console.log(items);
       res.render('pages/proveAssignments/prove04/admin/item-list', { 
         title: 'Admin Items',
-        path: '/admin/items',
+        path: '/admin/item',
         items: items,
         hasItems:items.length > 0
       });
