@@ -21,9 +21,9 @@ ul.chat li.message {
 }
 
 ul.chat li.uMessage {
-    border: solid #008000 0.5rem;
+    border: solid #170080 0.5rem;
     margin-left: auto;
-    background-color: #008000;
+    background-color: #170080;
     color: #F8F8FF;
 }
 
@@ -41,4 +41,8 @@ ul.chat li.uMessage {
 
 .displayname {
     font-size: 1.5em;
+}
+
+h1{
+    font-weight: bold;
 }
